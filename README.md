@@ -1,2 +1,2 @@
 # K8S-CICD
-learn CICD on k8s
+cicd on k8s
