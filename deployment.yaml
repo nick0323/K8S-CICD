@@ -79,7 +79,7 @@ spec:
   - name: web
     port: 8080
     targetPort: web
-    nodePort: 30002
+    nodePort: 30088
   - name: agent
     port: 50000
     targetPort: agent
