@@ -4,6 +4,8 @@ kind: Deployment
 metadata:
   name: jenkins
   namespace: jenkins
+annotations:
+     fluxcd.io/automated: "true"
 spec:
   template:
     metadata:
