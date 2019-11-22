@@ -6,7 +6,7 @@ metadata:
   namespace: jenkins
 annotations:
   fluxcd.io/automated: "true"
-  fluxcd.io/tag.jenkins: regex:^tls*
+  fluxcd.io/tag.jenkins: regex:^t*
 spec:
   template:
     metadata:
@@ -82,7 +82,7 @@ spec:
   - name: web
     port: 8080
     targetPort: web
-    nodePort: 30088
+    #nodePort: 30088
   - name: agent
     port: 50000
     targetPort: agent
