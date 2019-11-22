@@ -5,7 +5,8 @@ metadata:
   name: jenkins
   namespace: jenkins
 annotations:
-     fluxcd.io/automated: "true"
+  fluxcd.io/automated: "true"
+  fluxcd.io/tag.jenkins: regex:^tls*
 spec:
   template:
     metadata:
