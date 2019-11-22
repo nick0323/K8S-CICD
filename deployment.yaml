@@ -8,6 +8,10 @@ annotations:
   fluxcd.io/automated: "true"
   fluxcd.io/tag.jenkins: regex:^t*
 spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: jenkins
   template:
     metadata:
       labels:
