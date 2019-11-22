@@ -53,10 +53,10 @@ spec:
           initialDelaySeconds: 60
           timeoutSeconds: 5
           failureThreshold: 12
-        volumeMounts:
-        - name: jenkinshome
-          subPath: jenkins
-          mountPath: /var/jenkins_home
+        #volumeMounts:
+        #- name: jenkinshome
+        #  subPath: jenkins
+        #  mountPath: /var/jenkins_home
         env:
         - name: LIMITS_MEMORY
           valueFrom:
@@ -67,10 +67,10 @@ spec:
           value: -Xmx$(LIMITS_MEMORY)m -XshowSettings:vm -Dhudson.slaves.NodeProvisioner.initialDelay=0 -Dhudson.slaves.NodeProvisioner.MARGIN=50 -Dhudson.slaves.NodeProvisioner.MARGIN0=0.85 -Duser.timezone=Asia/Shanghai
       securityContext:
         fsGroup: 1000
-      volumes:
-      - name: jenkinshome
-        persistentVolumeClaim:
-          claimName: jenkins-pvc
+      #volumes:
+      #- name: jenkinshome
+      #  persistentVolumeClaim:
+      #    claimName: jenkins-pvc
 
 ---
 apiVersion: v1
