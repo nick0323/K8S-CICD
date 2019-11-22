@@ -4,11 +4,11 @@ kind: Deployment
 metadata:
   name: jenkins
   namespace: jenkins
-labels:
+  labels:
     app: jenkins
-annotations:
-  fluxcd.io/automated: "true"
-  fluxcd.io/tag.jenkins: regex:^t*
+  annotations:
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.jenkins: regex:^t*
 spec:
   replicas: 1 
   selector:
