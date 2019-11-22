@@ -2,7 +2,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: jenkins-dep
+  name: jenkins
   namespace: jenkins
 annotations:
   fluxcd.io/automated: "true"
